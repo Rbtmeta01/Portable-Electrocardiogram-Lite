@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="img/ecgdark.png" alt="logo" style="transform: scale(0.5);">
+            <h3 id="logoname">Pu<span style="color: #913592;">l</span>se<span style="color: #913592;">L</span>inK</h3>
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#project">Project</a></li>
+            </ul>
+        </nav>
+        <button>Welcome</button>
+    </header>
+
+    <section id="home" style="text-align: center; padding: 50px 0;">
+        <div class="nologin">
+            <h1>Welcome to the ECG Monitoring System</h1>
+            <h2>Track your <span style="color: #913592;">heart</span> activity in real time</h2>
+        </div>
+    </section>
+
+    <section id="project" style="color: #f0e4f1; padding: 50px;">
+        <h1 style="font-family: 'Nunito', sans-serif; font-size: 2em; color:#d165d3; text-decoration: underline; text-decoration-color: #18ecd0;">Project Overview</h1>
+        <p>Our project is designed to develop a real-time <span style="color: #913592;">ECG</span> (Electrocardiogram) monitoring system using a Raspberry Pi. The system captures ECG readings wirelessly via Bluetooth and processes them for accurate display and analysis.</p>
+        <br>
+        <p>With a secure login system, we ensure that only authorized users can access health data. Processed ECG readings are displayed on a dedicated website, providing an intuitive, user-friendly platform for real-time heart monitoring.</p>
+        <br>
+        <p>Future enhancements include data logging, tracking historical ECG readings, and mobile access, improving accessibility and security in medical data management.</p>
+    </section>
+
+    <section id="ecg_monitor" style="text-align: center; padding: 50px;">
+        <h2 style="font-family: 'Nunito', sans-serif; font-size: 2em; color:#d165d3; margin-bottom: 20px;">ECG Monitor</h2>
+        <p>ECG Value: <span id="ecg_value" style="color: #18ecd0;">Loading...</span></p>
+        <p>Status: <span id="status" style="color: #18ecd0;">Loading...</span></p>
+        <div style="max-width: 600px; margin: auto;">
+            <canvas id="ecgChart" style="width: 100%; height: auto;"></canvas>
+        </div>
+    </section>
+
+</body>
+</html>
